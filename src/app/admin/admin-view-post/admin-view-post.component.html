@@ -1,0 +1,53 @@
+<div class="container" *ngIf="post">
+  <h1>View Blog</h1>
+  <br>
+  <br>
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label class="form-label">Id</label>
+      <input type="text" class="form-control" name="id" [(ngModel)]="post.id" readonly>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Title</label>
+      <input type="text" class="form-control" name="title" [(ngModel)]="post.title">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Content</label>
+    <textarea type="text" class="form-control" name="content" [(ngModel)]="post.content"></textarea>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Summary</label>
+      <input type="text" class="form-control" name="summary" [(ngModel)]="post.summary">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">FeaturedImagesUrl</label>
+      <input type="text" class="form-control" name="featuredImagesUrl" [(ngModel)]="post.featuredImagesUrl">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Author</label>
+      <input type="text" class="form-control" name="author" [(ngModel)]="post.author">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">UrlHandle</label>
+      <input type="text" class="form-control" name="urlHandle" [(ngModel)]="post.urlHandle">
+    </div>
+    <div class="form-check mb-3">
+    <label class="form-check-label">Visible</label>
+    <input class="form-check-input" type="checkbox" name="visible" [(ngModel)]="post.visible">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">PublishedDate</label>
+      <input type="text" class="form-control" name="publishDate" [(ngModel)]="post.publishedDate">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">UpdatedDate</label>
+      <input type="text" class="form-control" name="updatedDate" [(ngModel)]="post.updatedDate">
+    </div>
+    <div class="mb-3">
+    <button class="btn btn-primary">Save</button>  
+    <button class="btn btn-danger " style="margin-left:20px" (click)="deletePost()" >Delete</button>  
+
+    </div>
+
+  </form>
+</div>

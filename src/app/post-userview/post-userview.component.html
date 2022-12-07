@@ -1,0 +1,15 @@
+<div class="container" *ngIf="posts">
+  <div *ngFor="let post of posts" class="card" style="max-width: 500px; margin:0 auto">
+    <img [src]="post.featuredImagesUrl" class="card-img-top" alt="..." width="100px" height="300px">
+    <div class="card-body">
+      <h1 class="card-title">
+        {{post.title}}
+      </h1>
+      <article class="card-text">
+        {{post.summary}}
+        </article>
+        
+        <a class="btn btn-primary" [routerLink]="['/blogpost',post.id]">View Blog Post</a>
+    </div>
+  </div>
+</div>
